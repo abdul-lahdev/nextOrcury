@@ -1,0 +1,434 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './layouts/sidebar.css';
+@import './layouts/header.css';
+@import './theme/default-colors.css';
+@import './override/reboot.css';
+
+
+@font-face {
+  font-family: "RobotoFlex";
+  src: url("/fonts/RobotoFlex.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+*{
+  font-family: "RobotoFlex", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@layer components {
+  .container {
+    @apply max-w-[1200px];
+  }
+
+  body {
+    @apply text-sm overflow-x-hidden;
+  }
+
+  .dropdown {
+    @apply shadow-md bg-white relative rounded-sm;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-dark
+  }
+
+  .card-subtitle {
+    @apply text-sm font-medium text-darklink
+  }
+
+  body {
+    @apply text-darklink;
+  }
+  html{
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  /*heading text color*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-dark font-semibold;
+  }
+
+  .border-ld {
+    @apply border-border;
+  }
+
+  .form-rounded-xl input {
+    @apply rounded-xl;
+  }
+
+  .form-control input {
+    @apply border border-border bg-transparent w-full text-sm;
+  }
+
+  .form-control-rounded input {
+    @apply rounded-full border border-border bg-transparent w-full text-sm;
+  }
+
+  .form-control-rounded input:focus {
+    @apply border-primary outline-none shadow-none ring-offset-0 ring-transparent;
+  }
+
+
+  .form-control input:focus {
+    @apply border-primary outline-none shadow-none ring-offset-0 ring-transparent;
+  }
+
+  .form-control-input {
+    @apply rounded-md border border-border bg-transparent w-full text-sm;
+  }
+
+  .form-control-input:focus {
+    @apply border-primary outline-none shadow-none ring-offset-0 ring-transparent;
+  }
+
+  .form-rounded-md input {
+    @apply rounded-md border border-border bg-transparent w-full text-sm;
+  }
+
+  .form-rounded-md input:focus {
+    @apply border-primary outline-none shadow-none ring-offset-0 ring-transparent;
+  }
+
+  .form-rounded input {
+    @apply rounded-full
+  }
+
+  .elipse {
+    @apply w-[18px] h-[10px]
+  }
+
+  input::placeholder {
+    @apply text-darklink
+  }
+
+  .select-option select {
+    @apply bg-muted border-0 text-darklink d py-2 ps-4 pe-9 w-auto focus:border-0 focus:ring-0 font-medium;
+  }
+
+  .select-md select {
+    @apply border-ld bg-transparent w-full text-sm rounded-md focus:border-primary focus:ring-0;
+  }
+
+  .select-rounded select {
+    @apply border-ld bg-transparent w-full text-sm rounded-xl focus:border-primary focus:ring-0;
+  }
+
+  .checkbox {
+    @apply h-[18px] w-[18px] border border-border bg-transparent focus:ring-0 focus:ring-offset-0
+  }
+}
+
+:root{
+  --white:#fff;
+  --white1:#E9EFF6;
+  --white2:#F9FAFB;
+  --grey1:#5E718D;
+  --grey2:#64748B;
+  --grey3:#5E677C;
+  --grey4:#8897AE;
+  --grey5:#455468;
+  --grey6:#D7DFE9;
+  --blue1:#0E1D32;
+  --blue2:#132743;
+  --red1:#E92215;
+}
+
+.headerBtmCard{
+  background: linear-gradient(65.16deg, rgba(92, 225, 230, 0.05) 8.22%, rgba(184, 252, 255, 0.05) 91.23%);
+
+  .headingText{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .paraText{
+    color: var(--grey1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+
+.leftBar{
+  background-color: var(--blue1);
+}
+.setMenuText{
+  color: var(--grey2);
+  font-size: 16px;
+
+
+}
+.smNavItem{
+  &:hover{
+    background-color: var(--blue2) ;
+    svg{
+      color: var(--white);
+
+    }
+    span{
+      color: var(--white);
+    }
+  }
+}
+
+.activeNavItem{
+  background-color: var(--blue2) ;
+  span{
+    color: var(--white);
+  }
+}
+
+.setIconColor{
+  color: var(--grey2);
+  svg{
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+.setcontainerWidth{
+  width: 99%;
+}
+.setBackground{
+  background-color: var(--white1);
+  -webkit-border-top-right-radius: 0;
+}
+.headerColor{
+  background-color: var(--blue1);
+
+  .setSearchBarInp{
+    background-color: var( --blue2) ;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+    color: var(--white);
+  }
+  .setnotification{
+    border-right: 2px solid var(--grey3);
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+  .memberName{
+    color: var(--white2);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .memberRole{
+    color: var(--grey4);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+
+  }
+}
+.MainHeadingNotification{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue1);
+}
+.setMainDiv{
+  display: grid;
+  grid-template-columns: 1fr 296px;
+  .rightBarSetting{
+    background-color: #C2D4DE40;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    top: 0;
+    width: 296px;
+
+
+    .liveCardSetting{
+      border-bottom: 1px solid var(--grey6);
+      padding: 1rem 0;
+      .liveCardImage{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+      .liveCardHeading{
+        color: var(--blue2);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      .liveCardRole{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--grey5);
+
+      }
+      .liveCardBadge{
+        background-color: var(--red1);
+        width: 32px;
+        height: 20px;
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+    }
+  }
+
+
+}
+.logoutBtn{
+  margin-left: 3rem;
+}
+.setHeight{
+  position: relative;
+}
+/*.setHeightHud,.setMainDiv{*/
+/*  height: 100%;*/
+/*}*/
+
+.allChildDiv{
+  overflow-x: hidden;
+  padding-top: 1rem;
+  padding-right: 1rem;
+
+
+  .mainNav {
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  .activeNav {
+    background-color: var(--blue1);
+    padding: 10px 1rem;
+    border-radius: 11px;
+    white-space: nowrap;
+    color: var(--white);
+    border: none;
+    transition: background-color 0.4s ease;
+  }
+
+  .nonActiveNav {
+    background-color: #D7DFE9;
+    padding: 10px 1rem;
+    border-radius: 11px;
+    white-space: nowrap;
+    transition: background-color 0.4s ease;
+  }
+
+
+
+
+  .trendingHeading{
+    color: var(--blue1);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+
+  .fCardSetting{
+  border-radius: 16px;
+    box-shadow: 0px 0px 25px 0px #C2D4DE1A;
+
+    .fCardlivBadge{
+      backdrop-filter: blur(12px);
+      background: #CF000026;
+      color: var(--white);
+      border-radius: 4px;
+      font-size: 12px ;
+      font-weight: 600;
+
+    }
+    .fCardHeading{
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 24px;
+    }
+    .fCardrole{
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--white1);
+
+    }
+
+    .fCardmainHeading{
+      color: var(--blue2);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* Limit to 2 lines */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px; /* Adjust width as needed */
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+
+      /* Positioning */
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* Position above the element */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .fCardViewers{
+      color: var(--grey5);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    .fCardtime{
+      color: var(--grey5);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+  }
+
+  .cardiologySetting{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+}
