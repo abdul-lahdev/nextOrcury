@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import DropdownUse from "@/app/components/dashboard/DropdownUse";
+import streamView from "@/app/(DashboardLayout)/ui/streamView/page";
 
 interface NetworkCardProps {
     cardUserName: any;
@@ -60,7 +61,7 @@ export default function FullCard ({cardUserName,cardUserRole,cardUserImg,cardTop
                     </div>
                 </div>
                 <div className="p-5 pt-0">
-                    <Link href="">
+                    <Link href="/ui/streamView">
                         <h5
                             className="fCardmainHeading mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
                             title="Intro to Neuroanatomy | Neurophysiology | Neuroscience | Central Nervous System"

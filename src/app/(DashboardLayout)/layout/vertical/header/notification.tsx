@@ -12,8 +12,8 @@ const Notification = () => {
                     className="h-10 w-10 hover:text-primary hover:bg-lightprimary rounded-full flex justify-center items-center cursor-pointer relative"
                     aria-label="Notifications"
                 >
-                    <Icon icon="solar:bell-linear" height={20} />
-                    <Badge className="h-2 w-2 rounded-full absolute end-2 top-1 bg-primary p-0" />
+                    <Icon icon="solar:bell-linear" height={20} style={{color:'#AFBACA'}} />
+                    <Badge className="h-2 w-2 rounded-full absolute end-2 top-1 p-0" style={{backgroundColor:'#CB2E04'}} />
                 </span>
             )}
             >

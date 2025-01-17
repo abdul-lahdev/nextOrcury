@@ -20,13 +20,21 @@ const SidebarLayout = () => {
             aria-label="Sidebar with multi-level dropdown example"
           >
             <div className="mb-7 px-6 brand-logo">
-              <FullLogo />
+              <div className='flex items-center justify-between'>
+                <FullLogo />
+                <div>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="#465A76" strokeWidth="2" strokeLinecap="round"
+                          strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
 
             <SimpleBar className="h-[calc(100vh_-_120px)]">
               <Sidebar.Items className="px-6">
                 <Sidebar.ItemGroup className="sidebar-nav">
-                  {SidebarContent.map((item, index) => (
+                {SidebarContent.map((item, index) => (
                     <React.Fragment key={index}>
                       <h5 className="text-link text-xs caption">
                         <span className="hide-menu">{item.heading}</span>

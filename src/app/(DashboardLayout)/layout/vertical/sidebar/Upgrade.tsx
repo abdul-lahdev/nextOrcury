@@ -14,7 +14,7 @@ const Upgrade = () => {
               <p className='text-center paraText'>
                 Go Live – Share Your Expertise in Real-Time!
               </p>
-              <Button color={"primary"} className="mt-3 rounded-xl" as={Link} href="#">
+              <Button color={"primary"} className="mt-3 rounded-xl setGoliveBtn" as={Link} href="#">
                 Go Live
               </Button>
             </div>
